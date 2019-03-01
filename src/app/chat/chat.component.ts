@@ -15,6 +15,8 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.isGroup = false;
+    this.name = "Unknown User";
+    this.messages = [ {id: 1, content: "my content 1", type: 2, ownership: true}, {id: 2, content: "my content 2", type: 2, ownership: false}]
   }
 
 }

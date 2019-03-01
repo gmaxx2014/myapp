@@ -17,6 +17,7 @@ export class MessagesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
   }
 
 }

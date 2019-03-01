@@ -1,5 +1,5 @@
-<div class="message" [ngClass]="message-mine">
-      <div class="message-sender">Hans</div>
-      <div class="message-content">the Message Content</div>
+<div class="message" [ngClass]="message.ownership ? 'message-mine' : 'message-other'">
+      <div *ngIf="isGroup && !message.ownership" class="message-sender">Sender</div>
+      <div class="message-content">{{ message.content }}</div>
       <span class="message-timestamp">00:00</span>
 </div>

@@ -7,8 +7,9 @@ import {Message} from '../shared/message';
   styleUrls: ['./messages-item.component.scss']
 })
 export class MessagesItemComponent implements OnInit {
-  @Input()
-  item: Message;
+
+  @Input('item')
+  message: Message;
 
   @Input()
   isGroup: boolean;
@@ -16,6 +17,7 @@ export class MessagesItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,4 +1,9 @@
 <app-toolbar></app-toolbar>
+<mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <app-messages-item [item]="message" [isGroup]="isGroup"></app-messages-item>
+    </mat-list-item>
+</mat-list>
 <!--
     <div class="content" fxLayout="column">
          <div class="user-bar" fxLayout="row" fxFlex="55px">
@@ -27,8 +32,4 @@
 </div>
 -->
 
-<mat-list>
-    <mat-list-item *ngFor="let message of messages">
-      <app-messages-item [item]="message" [isGroup]="isGroup"></app-messages-item>
-    </mat-list-item>
-</mat-list>
+
