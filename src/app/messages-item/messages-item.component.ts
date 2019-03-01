@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Message} from '../shared/message';
 
 @Component({
   selector: 'app-messages-item',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages-item.component.scss']
 })
 export class MessagesItemComponent implements OnInit {
+  @Input()
+  item: Message;
+
+  @Input()
+  isGroup: boolean;
 
   constructor() { }
 

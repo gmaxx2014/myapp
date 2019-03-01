@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Message} from '../shared/message';
 
 @Component({
   selector: 'app-messages-list',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages-list.component.scss']
 })
 export class MessagesListComponent implements OnInit {
+
+  @Input('items')
+  messages: Message[];
+
+  @Input()
+  isGroup: boolean;
 
   constructor() { }
 
