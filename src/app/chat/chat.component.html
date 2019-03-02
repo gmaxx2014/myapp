@@ -1,11 +1,13 @@
 <app-toolbar>
-    <button class="navigation" mat-button (click)="goToChats()">
-      <mat-icon aria-label="Icon-button with an arrow back icon">arrow_back</mat-icon>
-    </button>
-    <img class="profile-pic" src="assets/avatar.jpg">
-    <div class="title">{{ name }}</div>
+  <button class="navigation" mat-button (click)="goToChats()">
+    <mat-icon aria-label="Icon-button with an arrow back icon">arrow_back</mat-icon>
+  </button>
+  <img class="profile-pic" src="assets/avatar.jpg">
+  <div class="title">{{ name }}</div>
 </app-toolbar>
 <div class="container">
-    <app-messages-list [items]="messages" [isGroup]="isGroup">
-    </app-messages-list>
+  <app-messages-list [items]="messages" [isGroup]="isGroup"
+                     libSelectableList="multiple_press" (multiple)="deleteMessages($event)">
+  </app-messages-list>
+  <app-new-message (newMessage)="addMessage($event)"></app-new-message>
 </div>

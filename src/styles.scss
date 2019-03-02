@@ -1,23 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-*, *:before, *:after {
-    box-sizing: inherit;
-  }
+:root {
+  --primary: #2c6157;
+  --secondary: #6fd056;
+}
 
-html {
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-primary {
+  background-color: var(--primary) !important;
+  color: white;
+}
+
+.mat-secondary {
+  background-color: var(--secondary) !important;
+  color: white;
+}
+
+.mat-primary-negative {
+  background-color: white !important;
+  color: var(--primary);
+}
+
+.mat-secondary-negative {
+  background-color: white !important;
+  color: var(--secondary);
+}
+
+.mat-default {
+  background-color: transparent !important;
+  color: black;
+}
+
+.mat-toolbar {
+  color: white;
+  background-color: var(--primary) !important;
+}
+
+.mat-focused .mat-form-field-label {
+  color: var(--primary) !important;
+}
+
+.mat-form-field-ripple {
+  background-color: var(--primary) !important;
+}
+
+.mat-input-element {
+  caret-color: var(--primary) !important;
+}
 

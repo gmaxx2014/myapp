@@ -10,6 +10,7 @@ import {
   MatListModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { MessagesListComponent } from './messages-list/messages-list.component';
 import { MessagesItemComponent } from './messages-item/messages-item.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { ChatComponent } from './chat/chat.component';
+import { NewMessageComponent } from './new-message/new-message.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ChatComponent } from './chat/chat.component';
     ChatComponent,
     MessagesListComponent,
     MessagesItemComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NewMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { ChatComponent } from './chat/chat.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
